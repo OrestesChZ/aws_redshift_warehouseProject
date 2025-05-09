@@ -8,8 +8,12 @@
 }}
 
 SELECT
-    transaction_type_id,
-    description,
+    interaction_id,
+    date_id,
+    account_id,
+    channel_id,
+    interaction_type,
+    interaction_rating,
     getdate() as created_at
  FROM
     {{var('bronze_schema')}}.ext_transaction_types
