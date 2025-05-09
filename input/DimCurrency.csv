@@ -1,0 +1,6 @@
+currency_id,name,iso3_code,active
+1,US Dollar,USD,TRUE
+2,Euro,EUR,TRUE
+3,British Pound,GBP,TRUE
+4,Canadian Dollar,CAD,TRUE
+5,Australian Dollar,AUD,TRUE

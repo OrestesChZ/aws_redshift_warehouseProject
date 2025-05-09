@@ -1,0 +1,6 @@
+transaction_type_id,description
+1,Deposit
+2,Withdrawal
+3,Transfer
+4,Loan Payment
+5,Investment Purchase

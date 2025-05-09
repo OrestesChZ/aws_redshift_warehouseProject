@@ -1,0 +1,11 @@
+account_id,account_number,customer_id,account_type,account_balance,credit_score
+1,ACC10001,1,Checking,1500.00,720
+2,ACC10002,2,Savings,2500.50,680
+3,ACC10003,3,Checking,320.00,610
+4,ACC10004,4,Savings,5100.75,790
+5,ACC10005,1,Investment,7500.00,740
+6,ACC10006,5,Checking,900.00,650
+7,ACC10007,6,Investment,10200.00,800
+8,ACC10008,7,Savings,4300.00,695
+9,ACC10009,8,Checking,1250.00,670
+10,ACC10010,9,Savings,2100.25,710

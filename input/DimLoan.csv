@@ -1,0 +1,6 @@
+loan_id,loan_type,loan_amount,interest_rate
+1,Personal Loan,15000.00,5.5
+2,Home Loan,250000.00,3.8
+3,Auto Loan,20000.00,4.2
+4,Student Loan,30000.00,6.0
+5,Consolidation Loan,50000.00,7.5

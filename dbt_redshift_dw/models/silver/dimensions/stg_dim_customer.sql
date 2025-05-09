@@ -1,0 +1,22 @@
+{{
+    config (
+        materialized = 'incremental',
+        alias = 'stg_dim_customer',
+        schema = 'customer_id',
+        incremental_strategy = 'delete+insert'
+    )
+}}
+
+SELECT
+    customer_id,
+    first_name,
+    last_name,
+    email,
+    address,
+    city,
+    state,
+    postal_code,
+    phone_number,
+    getdate() as created_at
+ FROM
+    {{var('bronze_schema')}}.ext_customers
