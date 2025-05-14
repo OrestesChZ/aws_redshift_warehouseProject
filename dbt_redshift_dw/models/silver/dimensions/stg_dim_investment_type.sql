@@ -2,7 +2,8 @@
     config (
         materialized = 'incremental',
         alias = 'stg_dim_investment_type',
-        schema = 'investment_type_id',
+        schema = var('silver_schema'),
+        unique_key = 'investment_type_id',
         incremental_strategy = 'delete+insert'
     )
 }}

@@ -2,7 +2,8 @@
     config (
         materialized = 'incremental',
         alias = 'stg_dim_loan',
-        schema = 'loan_id',
+        schema = var('silver_schema'),
+        unique_key = 'loan_id',
         incremental_strategy = 'delete+insert'
     )
 }}

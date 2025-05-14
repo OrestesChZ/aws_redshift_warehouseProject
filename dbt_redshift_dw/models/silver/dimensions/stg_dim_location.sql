@@ -2,7 +2,8 @@
     config (
         materialized = 'incremental',
         alias = 'stg_dim_location',
-        schema = 'location_id',
+        schema = var('silver_schema'),
+        unique_key = 'location_id',
         incremental_strategy = 'delete+insert'
     )
 }}
