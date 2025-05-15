@@ -1,8 +1,9 @@
 {{
     config (
         materialized = 'incremental',
-        alias = 'stg_dim_date',
-        schema = 'date_id',
+        alias = 'dim_date',
+        schema = var('gold_schema'),
+        unique_key = 'date_id',
         incremental_strategy = 'delete+insert'
     )
 }}
@@ -15,6 +16,6 @@ SELECT
     year,
     quarter,
     weekday,
-    getdate() as created_at
+    created_at
  FROM
-    {{var('bronze_schema')}}.ext_dates
+    {{ref ('stg_dim_date')}}

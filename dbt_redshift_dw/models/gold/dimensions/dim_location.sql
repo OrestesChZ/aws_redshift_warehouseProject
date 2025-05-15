@@ -1,8 +1,9 @@
 {{
     config (
         materialized = 'incremental',
-        alias = 'stg_dim_location',
-        schema = 'location_id',
+        alias = 'dim_location',
+        schema = var('gold_schema'),
+        unique_key = 'location_id',
         incremental_strategy = 'delete+insert'
     )
 }}
@@ -13,6 +14,6 @@ SELECT
     state,
     country,
     address,
-    getdate() as created_at
+    created_at
  FROM
-    {{var('bronze_schema')}}.ext_locations
+    {{ref ('stg_dim_location')}}
