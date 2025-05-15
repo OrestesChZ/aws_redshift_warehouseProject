@@ -32,7 +32,7 @@ SELECT
     c.full_name,
     c.city,
     c.state,
-    l,country,
+    l.country,
     c.postal_code,
     s.channel_id,
     ch.channel_name,

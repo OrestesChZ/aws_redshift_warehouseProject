@@ -36,18 +36,19 @@ vars:
 # files using the `{{ config(...) }}` macro.
 models:
   dbt_redshift_dw:
-    # Config indicated by + and applies to all files under models/example/
     silver:
+      +schema: dev_silver
       dimensions:
         materialized: table
-        tags: [ 'dimensions' ]
+        tags: ['dimensions']
       facts:
-        +materialized: table
-        tags: [ 'facts' ]
+        materialized: table
+        tags: ['facts']
     gold:
+      +schema: dev_gold
       dimensions:
         materialized: table
-        tags: [ 'dimensions' ]
+        tags: ['dimensions']
       facts:
-        +materialized: table
-        tags: [ 'facts' ]
+        materialized: table
+        tags: ['facts']
