@@ -15,6 +15,7 @@ SELECT
     balance_id,
     date_id,
     account_id,
+    currency_id,
     opening_balance,
     closing_balance,
     average_balance,

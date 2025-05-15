@@ -1,7 +1,7 @@
 {{
     config (
         materialized = 'view',
-        alias = 'fact_customer_interaction',
+        alias = 'fact_customer_interactions',
         schema = var('gold_schema'),
         unique_key = 'interaction_id',
         incremental_strategy = 'delete+insert',
